@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\InvokeController;
 
 Route::get('/', function () {
     return view('welcome2');
@@ -123,6 +124,8 @@ Route::get('/function',function(){
 
 // routing to controller file, calling show() function inside controller file
 Route::get('/controller',[PageController::class,'show']);
+
+Route::get('/invoke',invokeController::class);
 
 
 
